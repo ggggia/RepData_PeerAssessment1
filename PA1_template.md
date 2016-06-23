@@ -24,7 +24,7 @@ steps <- aggregate(table$steps, by = list(table$date), sum, na.rm = TRUE)
 hist(steps$x,breaks = 20, main = "Histogram of steps per day", xlab = 'Total Number of Steps', col = 'grey')
 ```
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png) 
+![plot of chunk unnamed-chunk-2](unnamed-chunk-2-1.png) 
 
 3. Calculate and report the mean and median of the total number of steps taken per day
 
@@ -55,7 +55,7 @@ interval <- aggregate(table$steps, by = list(table$interval), mean, na.rm = TRUE
 plot(interval,type="l", main = "Time Series", xlab = '5-minute interval', ylab = 'Average Number of Steps')
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
+![plot of chunk unnamed-chunk-4](unnamed-chunk-4-1.png) 
 
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -107,7 +107,7 @@ steps2 <- aggregate(table2$steps, by = list(table$date), sum)
 hist(steps2$x,breaks = 20, main = "Histogram of steps per day", xlab = 'Total Number of Steps', col = 'grey')
 ```
 
-![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png) 
+![plot of chunk unnamed-chunk-8](unnamed-chunk-8-1.png) 
 
 ```r
 mean(steps2$x)
@@ -147,11 +147,11 @@ intervalweekend <- aggregate(weekend$steps, by = list(weekend$interval), mean)
 plot(intervalweekend,type="l", main = "Weekend Time Series", xlab = '5-minute interval', ylab = 'Average Number of Steps')
 ```
 
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png) 
+![plot of chunk unnamed-chunk-10](unnamed-chunk-10-1.png) 
 
 ```r
 intervalweekday <- aggregate(weekday$steps, by = list(weekday$interval), mean)
 plot(intervalweekday,type="l", main = "Weekday Time Series", xlab = '5-minute interval', ylab = 'Average Number of Steps')
 ```
 
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-2.png) 
+![plot of chunk unnamed-chunk-10](unnamed-chunk-10-2.png) 
